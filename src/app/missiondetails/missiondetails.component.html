@@ -1,0 +1,37 @@
+<div>
+    <h1>
+        <a href="/"><mat-icon>keyboard_arrow_left</mat-icon></a> SpaceX Missions Details
+    </h1>
+    <mat-card class="container">
+        <img style="float: left;  height: 300px; width: 300px;" mat-card-lg-image src="{{ mission?.links?.mission_patch }}" />
+        <div class="main-content">
+                <div class="sub-title">{{ mission?.mission_name }}</div>
+                <p>Name: {{ mission?.mission_name }}</p>
+                <p>Launch Year: {{ mission?.launch_year }}</p>
+
+                <div class="sub-title">Rocket</div>
+                <p>Name: {{ mission?.rocket?.rocket_name }}</p>
+                <p>Type: {{ mission?.rocket?.rocket_type }}</p>
+
+        
+                <div class="sub-title">Launch Site</div>
+                <p>{{ mission?.launch_site?.site_name_long }}</p>
+
+
+                <div class="sub-title">Launch details</div>
+                <p>{{ mission?.details }}</p>
+               
+
+                <div class="sub-title">Information on launch details</div>
+                    <a mat-stroked-button target="_blank" href="{{ mission?.links?.article_link }}">
+                        <mat-icon class="blue-icon" aria-hidden="false" aria-label="description icon">description</mat-icon>
+                    </a>
+                    <a target="_blank" href="{{ mission?.links?.wikipedia }}" mat-stroked-button color="accent">
+                        <mat-icon aria-hidden="false" aria-label="public icon">public</mat-icon>
+                    </a>
+                    <a target="_blank"  href="{{ mission?.links?.video_link }}" mat-stroked-button color="accent">
+                        <mat-icon class="orange-icon" aria-hidden="false" aria-label="videocam icon">youtube link</mat-icon>
+                    </a>
+                </div>
+    </mat-card>
+</div>
